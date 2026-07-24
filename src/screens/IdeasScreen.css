@@ -1,0 +1,78 @@
+.ideas-screen {
+  min-height: 100%;
+  position: relative;
+}
+.edit-btn {
+  font-size: 15px; font-weight: 700; color: var(--primary);
+  background: none; border: none; cursor: pointer;
+}
+.ideas-head {
+  padding: 8px 24px 16px;
+  position: relative; z-index: 2;
+}
+.ideas-head h1 {
+  font-size: 30px; font-weight: 800; letter-spacing: -.8px; color: var(--text);
+}
+.ideas-head p {
+  font-size: 14px; color: var(--text-2); margin-top: 4px;
+}
+
+.ideas-list {
+  padding: 0 22px 30px;
+  position: relative; z-index: 2;
+}
+.dream {
+  display: flex; align-items: center; gap: 13px;
+  background: var(--glass); border: 1px solid var(--border);
+  backdrop-filter: blur(20px);
+  border-radius: 16px; padding: 15px; margin-bottom: 10px;
+  transition: background .2s;
+}
+.dream.done {
+  background: rgba(126,232,154,.08);
+  border-color: rgba(126,232,154,.15);
+}
+.dream-box {
+  width: 24px; height: 24px; border-radius: 8px; flex-shrink: 0;
+  border: 1.5px solid var(--text-3);
+  background: none; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff;
+}
+.dream.done .dream-box {
+  background: linear-gradient(135deg, #4ce08a, #2bc76e);
+  border: none;
+  box-shadow: 0 4px 10px rgba(76,224,138,.4);
+}
+.dream.done .dream-box svg { width: 15px; height: 15px; }
+.dream-text {
+  flex: 1; font-size: 15.5px; font-weight: 600; color: var(--text);
+}
+.dream.done .dream-text {
+  color: var(--text-3); text-decoration: line-through;
+}
+.dream-acts { display: flex; gap: 8px; }
+.dream-act {
+  width: 32px; height: 32px; border-radius: 9px;
+  border: none; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+}
+.dream-act svg { width: 16px; height: 16px; }
+.dream-act.e { background: var(--glass); color: var(--text); }
+.dream-act.d { background: rgba(255,69,90,.14); color: #ff5c6b; }
+
+.dream-edit-input {
+  flex: 1; background: none; border: none; outline: none;
+  font-size: 15.5px; font-weight: 600; color: var(--text);
+  font-family: inherit;
+}
+.dream-edit-input::placeholder { color: var(--text-3); }
+
+.dream-add {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  width: 100%;
+  border: 1px dashed var(--border); border-radius: 16px;
+  padding: 15px; background: none; cursor: pointer;
+  color: var(--primary); font-size: 14.5px; font-weight: 600;
+}
+.dream-add svg { width: 18px; height: 18px; }
