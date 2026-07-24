@@ -15,7 +15,7 @@ function diffParts(startDate) {
   return { days, hours, minutes, seconds }
 }
 
-export default function TimerScreen({ state, update }) {
+export default function TimerScreen({ state, update, partnerName }) {
   const [t, setT] = useState(() => diffParts(state.startDate))
   const [showSettings, setShowSettings] = useState(false)
   const quote = quoteOfTheDay()
@@ -57,7 +57,7 @@ export default function TimerScreen({ state, update }) {
       </div>
 
       {showSettings && (
-        <SettingsSheet state={state} update={update} onClose={() => setShowSettings(false)} />
+        <SettingsSheet state={state} update={update} partnerName={partnerName} onClose={() => setShowSettings(false)} />
       )}
     </div>
   )

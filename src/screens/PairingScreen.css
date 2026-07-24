@@ -1,0 +1,88 @@
+.pairing-screen {
+  min-height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.pairing-body {
+  flex: 1;
+  padding: 40px 26px 30px;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.pairing-hearts {
+  position: relative;
+  width: 150px;
+  height: 96px;
+  margin-bottom: 26px;
+}
+.pairing-av {
+  position: absolute;
+  top: 16px;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+}
+.pairing-av.l { left: 0; background: linear-gradient(135deg, #ff5c8a, #ff8a9e); }
+.pairing-av.r { right: 0; background: linear-gradient(135deg, #a68cff, #5ce0ff); }
+.pairing-link-ico {
+  position: absolute;
+  top: 30px; left: 50%; transform: translateX(-50%);
+  width: 44px; height: 44px; border-radius: 50%;
+  background: var(--bg-bot);
+  border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 3;
+  box-shadow: 0 0 24px rgba(255,92,138,.5);
+  color: var(--primary);
+}
+.pairing-link-ico svg { width: 20px; height: 20px; }
+
+.pairing-body h1 {
+  font-size: 27px; font-weight: 800; letter-spacing: -.6px; color: var(--text);
+}
+.pairing-body p {
+  margin: 10px 0 0; font-size: 15px; line-height: 1.5; color: var(--text-2); max-width: 290px;
+}
+
+.pairing-error {
+  margin-top: 20px; color: #ff5c6b; font-size: 13px; font-weight: 600;
+}
+
+.pairing-card {
+  margin-top: 30px; width: 100%; padding: 18px;
+}
+.pairing-label {
+  font-size: 11px; text-transform: uppercase; letter-spacing: 1.2px;
+  color: var(--text-2); font-weight: 600; text-align: left;
+}
+.pairing-linkrow {
+  display: flex; align-items: center; gap: 10px; margin-top: 10px;
+  background: rgba(0,0,0,.18); border-radius: 12px; padding: 12px 14px;
+}
+.pairing-url {
+  flex: 1; font-size: 12.5px; color: var(--text); font-family: 'SF Mono', monospace;
+  text-align: left; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;
+}
+.pairing-copy {
+  padding: 8px 12px; border-radius: 9px; flex-shrink: 0;
+  background: rgba(255,92,138,.16); color: var(--primary);
+  border: none; font-size: 12px; font-weight: 700; cursor: pointer;
+}
+.pairing-send { margin-top: 16px; width: 100%; }
+
+.pairing-status {
+  margin-top: 22px; display: flex; align-items: center; gap: 9px;
+  font-size: 13.5px; color: var(--text-2);
+}
+.pairing-pulse {
+  width: 9px; height: 9px; border-radius: 50%;
+  background: #ffb020; box-shadow: 0 0 10px #ffb020;
+  animation: pulse 1.4s ease-in-out infinite;
+}
+@keyframes pulse { 0%,100% { opacity: 1 } 50% { opacity: .35 } }

@@ -1,7 +1,7 @@
 import { CalendarIcon, SunIcon, MoonIcon, LinkIcon } from '../components/Icons'
 import './SettingsSheet.css'
 
-export default function SettingsSheet({ state, update, onClose }) {
+export default function SettingsSheet({ state, update, onClose, partnerName }) {
   return (
     <div className="sheet-backdrop" onClick={onClose}>
       <div className="sheet" onClick={(e) => e.stopPropagation()}>
@@ -56,7 +56,7 @@ export default function SettingsSheet({ state, update, onClose }) {
           <div className="set-row">
             <div className="set-ic"><LinkIcon /></div>
             <div className="set-txt">Связь с партнёром</div>
-            <div className="set-val">Скоро</div>
+            <div className="set-val">{partnerName ? `Соединено · ${partnerName}` : 'Не подключено'}</div>
           </div>
         </div>
 
